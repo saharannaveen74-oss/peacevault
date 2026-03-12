@@ -3,34 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PeaceVault Token Landing Page</title>
+    <title>Peace Vault</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <style>
-        body { font-family: Arial, sans-serif; background-color: #f4f4f4; margin: 0; padding: 0; }
-        .container { width: 80%; margin: auto; overflow: hidden; padding: 30px; background: #fff; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
-        h1 { color: #333; }
-        .button { background-color: #28a745; color: white; border: none; padding: 10px 20px; cursor: pointer; border-radius: 5px; }
-        .button:hover { background-color: #218838; }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(90deg, #24C6DC, #514A9D);
+            color: white;
+        }
+        header {
+            background: #2C3E50;
+            padding: 1rem;
+            text-align: center;
+        }
+        nav {
+            margin: 1rem 0;
+        }
+        nav a {
+            margin: 0 15px;
+            color: white;
+            text-decoration: none;
+            font-size: 1.1rem;
+        }
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 2rem;
+        }
+        .card {
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            margin-bottom: 20px;
+            padding: 15px;
+            transition: transform 0.2s;
+        }
+        .card:hover {
+            transform: scale(1.05);
+        }
+        .copy-button {
+            background: #1abc9c;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .social-links i {
+            margin-right: 10px;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
+    <header>
+        <h1>Welcome to Peace Vault</h1>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
     <div class="container">
-        <h1>Welcome to PeaceVault</h1>
-        <p>Token Contract Address: <strong>0x12A706DE1b49A1770389A6Ec2229062A462f7a3a</strong></p>
-        <p>Symbol: <strong>PVLT</strong></p>
-        <p>Network: <strong>BSC (Binance Smart Chain)</strong></p>
-        <div>
-            <button class="button" id="copyButton">Copy Contract Address</button>
+        <div class="card">
+            <h2>Token Information</h2>
+            <p>Here you can view all the token information.</p>
+            <button class="copy-button" onclick="/* copy functionality */">Copy</button>
         </div>
-        <p>Follow us on <a href="https://twitter.com/peacevault123" target="_blank">Twitter</a> and join our <a href="https://t.me/peacevault" target="_blank">Telegram</a> community!</p>
+        <div class="card">
+            <h2>Another Token Info</h2>
+            <p>Details about another token.</p>
+            <button class="copy-button" onclick="/* copy functionality */">Copy</button>
+        </div>
+        <footer class="social-links">
+            <h3>Follow us:</h3>
+            <i class="fab fa-facebook"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-linkedin"></i>
+        </footer>
     </div>
-    <script>
-        document.getElementById('copyButton').addEventListener('click', function() {
-            navigator.clipboard.writeText("0x12A706DE1b49A1770389A6Ec2229062A462f7a3a").then(function() {
-                alert('Contract address copied to clipboard!');
-            }, function(err) {
-                console.error('Could not copy text: ', err);
-            });
-        });
-    </script>
 </body>
 </html>
