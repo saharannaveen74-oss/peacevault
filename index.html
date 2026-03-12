@@ -3,30 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PeaceVault</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>PeaceVault Token Landing Page</title>
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #f4f4f4; margin: 0; padding: 0; }
+        .container { width: 80%; margin: auto; overflow: hidden; padding: 30px; background: #fff; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        h1 { color: #333; }
+        .button { background-color: #28a745; color: white; border: none; padding: 10px 20px; cursor: pointer; border-radius: 5px; }
+        .button:hover { background-color: #218838; }
+    </style>
 </head>
 <body>
-    <header>
+    <div class="container">
         <h1>Welcome to PeaceVault</h1>
-        <p>Your secure space for peace of mind.</p>
-    </header>
-    <main>
-        <section>
-            <h2>About Us</h2>
-            <p>PeaceVault is dedicated to providing you with a safe space for your important documents and memories.</p>
-        </section>
-        <section>
-            <h2>Services</h2>
-            <ul>
-                <li>Secure Document Storage</li>
-                <li>Easy File Sharing</li>
-                <li>24/7 Access</li>
-            </ul>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2026 PeaceVault. All rights reserved.</p>
-    </footer>
+        <p>Token Contract Address: <strong>0x12A706DE1b49A1770389A6Ec2229062A462f7a3a</strong></p>
+        <p>Symbol: <strong>PVLT</strong></p>
+        <p>Network: <strong>BSC (Binance Smart Chain)</strong></p>
+        <div>
+            <button class="button" id="copyButton">Copy Contract Address</button>
+        </div>
+        <p>Follow us on <a href="https://twitter.com/peacevault123" target="_blank">Twitter</a> and join our <a href="https://t.me/peacevault" target="_blank">Telegram</a> community!</p>
+    </div>
+    <script>
+        document.getElementById('copyButton').addEventListener('click', function() {
+            navigator.clipboard.writeText("0x12A706DE1b49A1770389A6Ec2229062A462f7a3a").then(function() {
+                alert('Contract address copied to clipboard!');
+            }, function(err) {
+                console.error('Could not copy text: ', err);
+            });
+        });
+    </script>
 </body>
 </html>
